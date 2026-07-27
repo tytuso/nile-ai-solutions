@@ -138,7 +138,7 @@ export default function RootLayout({
 
         <Script
           id="nileflow-website-widget"
-          src="https://nileflow-five.vercel.app/widget/nileflow.js"
+          src="https://nileflow-five.vercel.app/widget/nileflow.js?v=715a80f"
           data-widget-key="9f505426-fe5e-4165-b2f8-50a2beba96b6"
           strategy="afterInteractive"
         />
