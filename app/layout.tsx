@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import {
   Geist,
   Geist_Mono,
@@ -97,7 +96,9 @@ export const metadata: Metadata = {
     description:
       "AI-powered software, automation and digital solutions for organisations across Africa.",
 
-    images: ["/opengraph-image"],
+    images: [
+      "/opengraph-image",
+    ],
   },
 
   robots: {
@@ -107,7 +108,8 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
+      "max-image-preview":
+        "large",
       "max-snippet": -1,
       "max-video-preview": -1,
     },
@@ -136,11 +138,11 @@ export default function RootLayout({
           <ScrollToTop />
         </ThemeProvider>
 
-        <Script
+        <script
           id="nileflow-website-widget"
           src="https://nileflow-five.vercel.app/widget/nileflow.js?v=715a80f"
           data-widget-key="9f505426-fe5e-4165-b2f8-50a2beba96b6"
-          strategy="afterInteractive"
+          async
         />
       </body>
     </html>
