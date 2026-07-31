@@ -9,13 +9,19 @@ export function HeroSection() {
   const shouldReduceMotion = useReducedMotion();
 
   const initialState = shouldReduceMotion
-    ? { opacity: 1, y: 0 }
-    : { opacity: 0, y: 24 };
+    ? {
+        opacity: 1,
+        y: 0,
+      }
+    : {
+        opacity: 0,
+        y: 24,
+      };
 
   return (
     <section
       id="home"
-      className="relative flex min-h-screen scroll-mt-20 items-center overflow-hidden pb-20 pt-32 sm:pt-36 lg:pt-32"
+      className="relative flex min-h-[calc(100svh-76px)] scroll-mt-20 items-center overflow-hidden pb-20 pt-16 sm:pt-20 lg:min-h-[calc(100svh-80px)] lg:py-24"
     >
       <FloatingBubbles />
 
@@ -27,7 +33,10 @@ export function HeroSection() {
         <div className="mx-auto max-w-5xl text-center">
           <motion.p
             initial={initialState}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
             transition={{
               duration: 0.6,
               delay: shouldReduceMotion ? 0 : 0.05,
@@ -40,7 +49,10 @@ export function HeroSection() {
 
           <motion.h1
             initial={initialState}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
             transition={{
               duration: 0.8,
               delay: shouldReduceMotion ? 0 : 0.16,
@@ -49,13 +61,20 @@ export function HeroSection() {
             className="text-[2.65rem] font-bold leading-[1.04] tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl"
           >
             We Build{" "}
-            <span className="gradient-text">Intelligent Systems</span>
-            <br className="hidden md:block" /> for Africa&apos;s Future.
+            <span className="gradient-text">
+              Intelligent Systems
+            </span>
+
+            <br className="hidden md:block" /> for Africa&apos;s
+            Future.
           </motion.h1>
 
           <motion.p
             initial={initialState}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
             transition={{
               duration: 0.75,
               delay: shouldReduceMotion ? 0 : 0.3,
@@ -63,14 +82,17 @@ export function HeroSection() {
             }}
             className="mx-auto mt-6 max-w-2xl text-[15px] leading-7 text-[var(--muted)] sm:text-base md:text-lg md:leading-8"
           >
-            AI-powered software, automation and digital solutions built in Africa
-for organisations that want to operate smarter, grow faster and create
-greater Impact.
+            AI-powered software, automation and digital solutions
+            built in Africa for organisations that want to operate
+            smarter, grow faster and create greater impact.
           </motion.p>
 
           <motion.div
             initial={initialState}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
             transition={{
               duration: 0.75,
               delay: shouldReduceMotion ? 0 : 0.42,
@@ -82,21 +104,47 @@ greater Impact.
               href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
-              whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+              whileHover={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      y: -4,
+                    }
+              }
+              whileTap={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      scale: 0.98,
+                    }
+              }
               className="flex min-h-14 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-6 py-4 text-sm font-semibold text-white shadow-lg sm:px-7 sm:text-base"
             >
               <MessageCircle size={19} />
+
               Talk to Us on WhatsApp
             </motion.a>
 
             <motion.a
-              href="#services"
-              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
-              whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+              href="#nileflow"
+              whileHover={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      y: -4,
+                    }
+              }
+              whileTap={
+                shouldReduceMotion
+                  ? undefined
+                  : {
+                      scale: 0.98,
+                    }
+              }
               className="flex min-h-14 items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-6 py-4 text-sm font-semibold shadow-sm sm:px-7 sm:text-base"
             >
-              Explore Our Solutions
+              Discover NileFlow
+
               <ArrowRight size={18} />
             </motion.a>
           </motion.div>

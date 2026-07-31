@@ -2,6 +2,7 @@ import { AboutSection } from "@/components/home/about-section";
 import { AiSystemsSection } from "@/components/home/ai-systems-section";
 import { ContactSection } from "@/components/home/contact-section";
 import { HeroSection } from "@/components/home/hero-section";
+import { NileFlowSection } from "@/components/home/nileflow-section";
 import { ProblemsSection } from "@/components/home/problems-section";
 import { ProcessSection } from "@/components/home/process-section";
 import { ServicesSection } from "@/components/home/services-section";
@@ -15,6 +16,8 @@ export default function Home() {
       <Header />
 
       <HeroSection />
+
+      <NileFlowSection />
 
       <ServicesSection />
 

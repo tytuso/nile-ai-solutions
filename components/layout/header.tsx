@@ -1,24 +1,60 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { ExternalLink, Menu, MessageCircle, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
-const navigation = [
-  { name: "Home", href: "/#home", path: "/" },
-  { name: "Services", href: "/services", path: "/services" },
+type NavItem = {
+  name: string;
+  href: string;
+  path?: string;
+  external?: boolean;
+};
+
+const navigation: NavItem[] = [
+  {
+    name: "Home",
+    href: "/#home",
+    path: "/",
+  },
+  {
+    name: "Services",
+    href: "/services",
+    path: "/services",
+  },
   {
     name: "AI Software Systems",
     href: "/services/ai-software-systems",
     path: "/services/ai-software-systems",
   },
-  { name: "Portfolio", href: "/portfolio", path: "/portfolio" },
-  { name: "About", href: "/#about", path: "/#about" },
-  { name: "Why Nile Ai", href: "/#why-nile", path: "/#why-nile" },
-  { name: "Contact", href: "/#contact", path: "/#contact" },
+  {
+    name: "NileFlow",
+    href: "https://nileflow.nileai.solutions/",
+    external: true,
+  },
+  {
+    name: "Portfolio",
+    href: "/portfolio",
+    path: "/portfolio",
+  },
+  {
+    name: "About",
+    href: "/#about",
+    path: "/#about",
+  },
+  {
+    name: "Why Nile Ai",
+    href: "/#why-nile",
+    path: "/#why-nile",
+  },
+  {
+    name: "Contact",
+    href: "/#contact",
+    path: "/#contact",
+  },
 ];
 
 export function Header() {
@@ -34,9 +70,14 @@ export function Header() {
     };
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -48,7 +89,9 @@ export function Header() {
 
     window.addEventListener("hashchange", updateHash);
 
-    return () => window.removeEventListener("hashchange", updateHash);
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+    };
   }, [pathname]);
 
   useEffect(() => {
@@ -59,7 +102,11 @@ export function Header() {
     };
   }, [menuOpen]);
 
-  function isActive(item: (typeof navigation)[number]) {
+  function isActive(item: NavItem) {
+    if (item.external || !item.path) {
+      return false;
+    }
+
     if (item.path.startsWith("/#")) {
       const itemHash = item.path.replace("/", "");
 
@@ -79,7 +126,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-50 w-full border-b border-[var(--border)] transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full border-b border-[var(--border)] transition-all duration-300 ${
         scrolled
           ? "bg-[var(--surface-glass)] shadow-sm backdrop-blur-xl"
           : "bg-[var(--surface-glass)] backdrop-blur-lg"
@@ -92,7 +139,9 @@ export function Header() {
           onClick={() => setMenuOpen(false)}
         >
           <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--primary)] via-[var(--accent)] to-[var(--secondary)] shadow-lg sm:h-11 sm:w-11">
-            <span className="text-lg font-black text-white sm:text-xl">N</span>
+            <span className="text-lg font-black text-white sm:text-xl">
+              N
+            </span>
 
             <span className="absolute -bottom-2 -left-2 h-6 w-14 rotate-[-18deg] rounded-full border-2 border-white/70" />
           </div>
@@ -110,6 +159,24 @@ export function Header() {
 
         <nav className="hidden items-center gap-5 xl:flex">
           {navigation.map((item) => {
+            if (item.external) {
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex items-center gap-1.5 whitespace-nowrap py-2 text-[13px] font-semibold text-[var(--primary)] transition hover:text-[var(--secondary)]"
+                >
+                  {item.name}
+
+                  <ExternalLink size={13} />
+
+                  <span className="absolute bottom-0 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] opacity-0 transition-all duration-300 group-hover:w-full group-hover:opacity-100" />
+                </a>
+              );
+            }
+
             const active = isActive(item);
 
             return (
@@ -126,7 +193,9 @@ export function Header() {
 
                 <span
                   className={`absolute bottom-0 left-0 h-0.5 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] transition-all duration-300 ${
-                    active ? "w-full opacity-100" : "w-0 opacity-0"
+                    active
+                      ? "w-full opacity-100"
+                      : "w-0 opacity-0"
                   }`}
                 />
               </Link>
@@ -145,6 +214,7 @@ export function Header() {
             className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
           >
             <MessageCircle size={18} />
+
             Let&apos;s Talk
           </a>
         </div>
@@ -154,8 +224,14 @@ export function Header() {
 
           <button
             type="button"
-            onClick={() => setMenuOpen((current) => !current)}
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            onClick={() => {
+              setMenuOpen((current) => !current);
+            }}
+            aria-label={
+              menuOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+            }
             aria-expanded={menuOpen}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)] shadow-sm"
           >
@@ -165,9 +241,26 @@ export function Header() {
       </div>
 
       {menuOpen && (
-        <div className="fixed inset-x-0 top-[76px] h-[calc(100vh-76px)] overflow-y-auto border-t border-[var(--border)] bg-[var(--surface)] xl:hidden">
+        <div className="fixed inset-x-0 top-[76px] h-[calc(100dvh-76px)] overflow-y-auto border-t border-[var(--border)] bg-[var(--surface)] lg:top-20 lg:h-[calc(100dvh-80px)] xl:hidden">
           <nav className="container flex flex-col py-5">
             {navigation.map((item) => {
+              if (item.external) {
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center justify-between border-b border-[var(--border)] py-4 text-base font-semibold text-[var(--primary)]"
+                  >
+                    <span>{item.name}</span>
+
+                    <ExternalLink size={18} />
+                  </a>
+                );
+              }
+
               const active = isActive(item);
 
               return (
@@ -198,6 +291,7 @@ export function Header() {
               className="mt-6 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-5 py-4 font-semibold text-white"
             >
               <MessageCircle size={19} />
+
               Talk to Us on WhatsApp
             </a>
           </nav>
