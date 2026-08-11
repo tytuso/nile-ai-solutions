@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
 
 import { services } from "@/lib/services";
+import { BrandMark } from "@/components/ui/brand-mark";
 
 const footerNavigation = [
   { name: "Home", href: "/#home" },
@@ -15,9 +16,8 @@ const footerNavigation = [
     href: "/ai-automation-uganda",
   },
   { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "Products", href: "/portfolio" },
   { name: "About", href: "/#about" },
-  { name: "Why Nile Ai", href: "/#why-nile" },
   { name: "Contact", href: "/#contact" },
 ];
  
@@ -31,14 +31,10 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
           <div>
             <Link href="/#home" className="inline-flex items-center gap-3">
-              <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--primary)] via-[var(--accent)] to-[var(--secondary)] shadow-lg">
-                <span className="text-xl font-black text-white">N</span>
-
-                <span className="absolute -bottom-2 -left-2 h-6 w-14 rotate-[-18deg] rounded-full border-2 border-white/70" />
-              </div>
+              <BrandMark className="h-12 w-12" />
 
               <div className="leading-none">
-                <p className="text-xl font-bold tracking-[-0.03em]">Nile Ai</p>
+                <p className="text-xl font-bold tracking-[-0.03em]">Nile AI</p>
 
                 <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
                   Solutions
@@ -117,10 +113,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-[var(--border)] pt-6 text-xs text-[var(--muted)] sm:text-sm md:flex-row md:items-center md:justify-between">
-          <p>© {currentYear} Nile Ai Solutions. All rights reserved.</p>
+        <div className="mt-14 flex flex-col gap-4 border-t border-[var(--border)] pt-6 text-xs text-[var(--muted)] sm:text-sm md:flex-row md:items-center md:justify-between">
+          <p>© {currentYear} Nile AI Solutions. All rights reserved.</p>
 
-          <p>Built for Africa&apos;s digital future.</p>
+          <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href="/privacy" className="transition hover:text-[var(--foreground)]">
+              Privacy
+            </Link>
+            <Link href="/terms" className="transition hover:text-[var(--foreground)]">
+              Terms
+            </Link>
+            <Link href="/responsible-ai" className="transition hover:text-[var(--foreground)]">
+              Responsible AI
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

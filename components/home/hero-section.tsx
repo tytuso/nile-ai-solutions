@@ -44,7 +44,7 @@ export function HeroSection() {
             }}
             className="mb-5 text-xs font-semibold uppercase tracking-[0.26em] text-[var(--primary)] sm:mb-6 sm:text-sm sm:tracking-[0.3em]"
           >
-            Nile Ai Solutions
+            Nile AI Solutions
           </motion.p>
 
           <motion.h1
@@ -101,7 +101,7 @@ export function HeroSection() {
             className="mx-auto mt-9 flex max-w-md flex-col justify-center gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:gap-4"
           >
             <motion.a
-              href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
+              href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
               whileHover={

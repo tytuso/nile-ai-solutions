@@ -133,7 +133,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className="mt-14">
             <a
               href={`https://wa.me/256753523529?text=${encodeURIComponent(
-                `Hello Nile Ai Solutions. I would like to discuss ${service.title}.`,
+                `Hello Nile AI Solutions. I would like to discuss ${service.title}.`,
               )}`}
               target="_blank"
               rel="noopener noreferrer"

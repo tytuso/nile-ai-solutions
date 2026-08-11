@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { ExternalLink, Menu, MessageCircle, X } from "lucide-react";
+import { Menu, MessageCircle, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import { BrandMark } from "@/components/ui/brand-mark";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 type NavItem = {
   name: string;
   href: string;
-  path?: string;
-  external?: boolean;
+  path: string;
 };
 
 const navigation: NavItem[] = [
@@ -21,34 +21,19 @@ const navigation: NavItem[] = [
     path: "/",
   },
   {
+    name: "Products",
+    href: "/portfolio",
+    path: "/portfolio",
+  },
+  {
     name: "Services",
     href: "/services",
     path: "/services",
   },
   {
-    name: "AI Software Systems",
-    href: "/services/ai-software-systems",
-    path: "/services/ai-software-systems",
-  },
-  {
-    name: "NileFlow",
-    href: "https://nileflow.nileai.solutions/",
-    external: true,
-  },
-  {
-    name: "Portfolio",
-    href: "/portfolio",
-    path: "/portfolio",
-  },
-  {
     name: "About",
     href: "/#about",
     path: "/#about",
-  },
-  {
-    name: "Why Nile Ai",
-    href: "/#why-nile",
-    path: "/#why-nile",
   },
   {
     name: "Contact",
@@ -103,10 +88,6 @@ export function Header() {
   }, [menuOpen]);
 
   function isActive(item: NavItem) {
-    if (item.external || !item.path) {
-      return false;
-    }
-
     if (item.path.startsWith("/#")) {
       const itemHash = item.path.replace("/", "");
 
@@ -118,7 +99,7 @@ export function Header() {
     }
 
     if (item.path === "/services") {
-      return pathname === "/services";
+      return pathname === "/services" || pathname.startsWith("/services/");
     }
 
     return pathname === item.path;
@@ -138,17 +119,11 @@ export function Header() {
           className="flex items-center gap-3"
           onClick={() => setMenuOpen(false)}
         >
-          <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--primary)] via-[var(--accent)] to-[var(--secondary)] shadow-lg sm:h-11 sm:w-11">
-            <span className="text-lg font-black text-white sm:text-xl">
-              N
-            </span>
-
-            <span className="absolute -bottom-2 -left-2 h-6 w-14 rotate-[-18deg] rounded-full border-2 border-white/70" />
-          </div>
+          <BrandMark className="h-10 w-10 sm:h-11 sm:w-11" />
 
           <div className="leading-none">
             <p className="text-base font-bold tracking-[-0.03em] sm:text-lg">
-              Nile Ai
+              Nile AI
             </p>
 
             <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.3em] text-[var(--muted)] sm:text-[10px]">
@@ -159,24 +134,6 @@ export function Header() {
 
         <nav className="hidden items-center gap-5 xl:flex">
           {navigation.map((item) => {
-            if (item.external) {
-              return (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex items-center gap-1.5 whitespace-nowrap py-2 text-[13px] font-semibold text-[var(--primary)] transition hover:text-[var(--secondary)]"
-                >
-                  {item.name}
-
-                  <ExternalLink size={13} />
-
-                  <span className="absolute bottom-0 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] opacity-0 transition-all duration-300 group-hover:w-full group-hover:opacity-100" />
-                </a>
-              );
-            }
-
             const active = isActive(item);
 
             return (
@@ -207,10 +164,10 @@ export function Header() {
           <ThemeToggle />
 
           <a
-            href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
+            href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Talk to Nile Ai Solutions on WhatsApp"
+            aria-label="Talk to Nile AI Solutions on WhatsApp"
             className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
           >
             <MessageCircle size={18} />
@@ -244,23 +201,6 @@ export function Header() {
         <div className="fixed inset-x-0 top-[76px] h-[calc(100dvh-76px)] overflow-y-auto border-t border-[var(--border)] bg-[var(--surface)] lg:top-20 lg:h-[calc(100dvh-80px)] xl:hidden">
           <nav className="container flex flex-col py-5">
             {navigation.map((item) => {
-              if (item.external) {
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-between border-b border-[var(--border)] py-4 text-base font-semibold text-[var(--primary)]"
-                  >
-                    <span>{item.name}</span>
-
-                    <ExternalLink size={18} />
-                  </a>
-                );
-              }
-
               const active = isActive(item);
 
               return (
@@ -284,7 +224,7 @@ export function Header() {
             })}
 
             <a
-              href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
+              href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}

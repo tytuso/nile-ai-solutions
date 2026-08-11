@@ -3,11 +3,11 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": ["Organization", "ProfessionalService"],
     "@id": "https://nileai.solutions/#organization",
-    name: "Nile Ai Solutions",
+    name: "Nile AI Solutions",
     url: "https://nileai.solutions",
     logo: "https://nileai.solutions/icon-512.png",
     description:
-      "Nile Ai Solutions develops AI-powered software, automation systems, websites, web applications and digital solutions for organisations in Uganda and across Africa.",
+      "Nile AI Solutions develops AI-powered software, automation systems, websites, web applications and digital solutions for organisations in Uganda and across Africa.",
     email: "hello@nileai.solutions",
     telephone: "+256753523529",
     areaServed: [

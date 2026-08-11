@@ -38,10 +38,10 @@ export function ContactSection() {
 
             <div className="grid gap-4">
               <a
-                href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
+                href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Chat with Nile Ai Solutions on WhatsApp"
+                aria-label="Chat with Nile AI Solutions on WhatsApp"
                 className="group flex items-center justify-between rounded-[26px] border border-[var(--border)] bg-[var(--surface-soft)] p-5 transition duration-300 hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="flex items-center gap-4">
@@ -65,7 +65,7 @@ export function ContactSection() {
 
               <a
                 href="mailto:hello@nileai.solutions"
-                aria-label="Send Nile Ai Solutions an email"
+                aria-label="Send Nile AI Solutions an email"
                 className="group flex items-center justify-between rounded-[26px] border border-[var(--border)] bg-[var(--surface-soft)] p-5 transition duration-300 hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="flex items-center gap-4">

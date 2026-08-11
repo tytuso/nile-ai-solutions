@@ -74,7 +74,7 @@ export function ProcessSection() {
             </h2>
 
             <p className="mt-6 max-w-lg text-base leading-7 text-[var(--muted)] md:text-lg md:leading-8">
-              Every Nile Ai project follows a clear process designed to reduce
+              Every Nile AI project follows a clear process designed to reduce
               uncertainty, improve quality and deliver technology that works in
               the real world.
             </p>
@@ -97,7 +97,7 @@ export function ProcessSection() {
             </div>
 
             <a
-  href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20developing%20a%20digital%20solution."
+  href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20developing%20a%20digital%20solution."
   target="_blank"
   rel="noopener noreferrer"
   className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"

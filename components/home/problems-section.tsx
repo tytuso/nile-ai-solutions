@@ -111,7 +111,7 @@ export function ProblemsSection() {
 
                   <div className="mt-auto pt-6">
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--secondary)] transition duration-500 group-hover:text-white/75">
-                      Nile Ai solution
+                      Nile AI solution
                     </p>
 
                     <p className="mt-2 text-sm leading-6 text-[var(--muted)] transition duration-500 group-hover:text-white">
@@ -126,7 +126,7 @@ export function ProblemsSection() {
 
         <div className="mt-12 flex justify-center">
           <a
-            href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20a%20business%20challenge%20that%20technology%20could%20help%20solve."
+            href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20a%20business%20challenge%20that%20technology%20could%20help%20solve."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-6 py-3.5 text-sm font-semibold shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md"

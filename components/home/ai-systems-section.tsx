@@ -99,7 +99,7 @@ export function AiSystemsSection() {
             </div>
 
             <a
-  href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20an%20AI%20software%20system."
+  href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20an%20AI%20software%20system."
   target="_blank"
   rel="noopener noreferrer"
   className="mt-9 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"

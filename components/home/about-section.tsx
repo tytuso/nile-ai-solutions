@@ -80,7 +80,7 @@ export function AboutSection() {
         <div className="grid items-start gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-              About Nile Ai Solutions
+              About Nile AI Solutions
             </p>
 
             <h2 className="mt-4 max-w-xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] md:text-5xl">
@@ -88,7 +88,7 @@ export function AboutSection() {
             </h2>
 
             <p className="mt-6 max-w-xl text-base leading-7 text-[var(--muted)] md:text-lg md:leading-8">
-              Nile Ai Solutions is an African technology company focused on
+              Nile AI Solutions is an African technology company focused on
               artificial intelligence, software development, automation and
               digital transformation.
             </p>
@@ -100,7 +100,7 @@ export function AboutSection() {
             </p>
 
             <a
-  href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
+  href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20learn%20more%20about%20your%20services."
   target="_blank"
   rel="noopener noreferrer"
   className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title: "AI Automation Uganda | Business & Workflow Automation",
 
   description:
-    "Nile Ai Solutions builds AI automation systems, AI agents, WhatsApp assistants and intelligent workflows for businesses and organisations in Uganda and across Africa.",
+    "Nile AI Solutions builds AI automation systems, AI agents, WhatsApp assistants and intelligent workflows for businesses and organisations in Uganda and across Africa.",
 
   keywords: [
     "AI automation Uganda",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "AI Automation Uganda | Nile Ai Solutions",
+    title: "AI Automation Uganda | Nile AI Solutions",
     description:
       "AI agents, WhatsApp automation and intelligent business workflows for organisations in Uganda.",
     url: "/ai-automation-uganda",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "AI Automation Uganda | Nile Ai Solutions",
+    title: "AI Automation Uganda | Nile AI Solutions",
     description:
       "AI agents and intelligent workflow automation for Ugandan organisations.",
   },
@@ -174,7 +174,7 @@ const faqItems = [
       "AI automation can support customer enquiries, lead qualification, appointment scheduling, document processing, task assignment, reporting, reminders, email responses, data entry and many other repetitive workflows.",
   },
   {
-    question: "Can Nile Ai Solutions automate WhatsApp in Uganda?",
+    question: "Can Nile AI Solutions automate WhatsApp in Uganda?",
     answer:
       "Yes. We can build WhatsApp-based assistants and workflows that answer questions, collect customer details, qualify enquiries, send updates and transfer conversations to staff where necessary.",
   },
@@ -208,7 +208,7 @@ export default function AiAutomationUgandaPage() {
     provider: {
       "@type": "Organization",
       "@id": "https://nileai.solutions/#organization",
-      name: "Nile Ai Solutions",
+      name: "Nile AI Solutions",
       url: "https://nileai.solutions",
       telephone: "+256753523529",
       email: "hello@nileai.solutions",
@@ -274,14 +274,14 @@ export default function AiAutomationUgandaPage() {
             </h1>
 
             <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              Nile Ai Solutions builds AI agents, WhatsApp assistants and
+              Nile AI Solutions builds AI agents, WhatsApp assistants and
               intelligent automation systems that help organisations in Uganda
               work faster, respond better and reduce repetitive manual tasks.
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20automate%20a%20business%20process."
+                href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20automate%20a%20business%20process."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -557,7 +557,7 @@ export default function AiAutomationUgandaPage() {
               </p>
 
               <a
-                href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20AI%20automation%20for%20my%20organisation."
+                href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20AI%20automation%20for%20my%20organisation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"

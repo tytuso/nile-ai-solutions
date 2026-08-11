@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "AI Software Development Uganda | Custom AI Systems",
 
   description:
-    "Nile Ai Solutions develops custom AI software, intelligent business systems, automation platforms and AI-powered applications for organisations in Uganda and across Africa.",
+    "Nile AI Solutions develops custom AI software, intelligent business systems, automation platforms and AI-powered applications for organisations in Uganda and across Africa.",
 
   keywords: [
     "AI software development Uganda",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "AI Software Development Uganda | Nile Ai Solutions",
+    title: "AI Software Development Uganda | Nile AI Solutions",
     description:
       "Custom AI software, intelligent platforms and automation systems for organisations in Uganda.",
     url: "/ai-software-development-uganda",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "AI Software Development Uganda | Nile Ai Solutions",
+    title: "AI Software Development Uganda | Nile AI Solutions",
     description:
       "Custom AI-powered software and intelligent business platforms for organisations in Uganda and Africa.",
   },
@@ -151,7 +151,7 @@ const faqItems = [
       "Custom AI software development involves designing an intelligent application around a particular organisation’s workflows, users, information and goals instead of relying entirely on a generic product.",
   },
   {
-    question: "Can Nile Ai Solutions integrate AI into existing software?",
+    question: "Can Nile AI Solutions integrate AI into existing software?",
     answer:
       "Yes. Depending on the existing platform, we can integrate AI assistants, document processing, automated responses, data analysis and other intelligent capabilities through APIs and custom development.",
   },
@@ -185,7 +185,7 @@ export default function AiSoftwareDevelopmentUgandaPage() {
     provider: {
       "@type": "Organization",
       "@id": "https://nileai.solutions/#organization",
-      name: "Nile Ai Solutions",
+      name: "Nile AI Solutions",
       url: "https://nileai.solutions",
       telephone: "+256753523529",
       email: "hello@nileai.solutions",
@@ -251,14 +251,14 @@ export default function AiSoftwareDevelopmentUgandaPage() {
             </h1>
 
             <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              Nile Ai Solutions designs and develops intelligent business
+              Nile AI Solutions designs and develops intelligent business
               software, automation platforms and AI-powered applications for
               organisations in Uganda and across Africa.
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20custom%20AI%20software%20development."
+                href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20custom%20AI%20software%20development."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -530,7 +530,7 @@ export default function AiSoftwareDevelopmentUgandaPage() {
               </p>
 
               <a
-                href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20AI%20software%20development%20for%20my%20organisation."
+                href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20AI%20software%20development%20for%20my%20organisation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"

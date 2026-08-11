@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Nile Ai Solutions";
+export const alt = "Nile AI Solutions";
 export const size = {
   width: 1200,
   height: 630,
@@ -59,7 +59,6 @@ export default function Image() {
             justifyContent: "space-between",
             position: "relative",
             width: "100%",
-            zIndex: 2,
           }}
         >
           <div
@@ -100,7 +99,7 @@ export default function Image() {
                   letterSpacing: "-1px",
                 }}
               >
-                Nile Ai
+                Nile AI
               </span>
 
               <span

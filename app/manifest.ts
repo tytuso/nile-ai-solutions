@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Nile Ai Solutions",
-    short_name: "Nile Ai",
+    name: "Nile AI Solutions",
+    short_name: "Nile AI",
     description:
       "AI-powered software, automation and digital solutions for African organisations.",
 

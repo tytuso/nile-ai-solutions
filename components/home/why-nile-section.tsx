@@ -68,7 +68,7 @@ export function WhyNileSection() {
         <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-              Why Nile Ai
+              Why Nile AI
             </p>
 
             <h2 className="mt-4 max-w-xl text-4xl font-bold leading-[1.08] tracking-[-0.045em] md:text-5xl">
@@ -109,12 +109,12 @@ export function WhyNileSection() {
             </div>
 
             <a
-              href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20how%20technology%20can%20support%20my%20organisation."
+              href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20how%20technology%20can%20support%20my%20organisation."
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              Work with Nile Ai
+              Work with Nile AI
               <ArrowRight size={18} />
             </a>
           </div>

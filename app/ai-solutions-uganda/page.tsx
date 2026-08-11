@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "AI Solutions Uganda | AI Software & Automation Company",
 
   description:
-    "Nile Ai Solutions is an AI company in Uganda developing AI software, AI agents, automation systems, websites and custom digital platforms for organisations across Africa.",
+    "Nile AI Solutions is an AI company in Uganda developing AI software, AI agents, automation systems, websites and custom digital platforms for organisations across Africa.",
 
   keywords: [
     "AI solutions Uganda",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "AI Solutions Uganda | Nile Ai Solutions",
+    title: "AI Solutions Uganda | Nile AI Solutions",
     description:
       "AI software, automation, AI agents and custom digital systems for businesses and organisations in Uganda.",
     url: "/ai-solutions-uganda",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "AI Solutions Uganda | Nile Ai Solutions",
+    title: "AI Solutions Uganda | Nile AI Solutions",
     description:
       "AI software, automation systems and intelligent digital solutions for organisations in Uganda and across Africa.",
   },
@@ -162,14 +162,14 @@ const reasons = [
 
 const faqItems = [
   {
-    question: "What AI solutions can Nile Ai Solutions build in Uganda?",
+    question: "What AI solutions can Nile AI Solutions build in Uganda?",
     answer:
       "We can develop AI agents, customer-support assistants, intelligent management systems, document-processing platforms, recommendation systems, workflow automation, dashboards and internal knowledge assistants.",
   },
   {
     question: "Do you only work with large organisations?",
     answer:
-      "No. Nile Ai Solutions can work with SMEs, growing businesses, government institutions, NGOs, schools and other organisations. The scope of each system is designed around the organisation’s actual needs and budget.",
+      "No. Nile AI Solutions can work with SMEs, growing businesses, government institutions, NGOs, schools and other organisations. The scope of each system is designed around the organisation’s actual needs and budget.",
   },
   {
     question: "Can you automate WhatsApp customer support?",
@@ -177,7 +177,7 @@ const faqItems = [
       "Yes. We can design WhatsApp-based assistants and automated workflows that respond to common questions, collect customer information, qualify enquiries and route complex requests to staff.",
   },
   {
-    question: "Can Nile Ai Solutions build custom software?",
+    question: "Can Nile AI Solutions build custom software?",
     answer:
       "Yes. We develop custom business systems, dashboards, portals, data platforms and web applications instead of limiting clients to generic off-the-shelf software.",
   },
@@ -199,7 +199,7 @@ export default function AiSolutionsUgandaPage() {
     provider: {
       "@type": "Organization",
       "@id": "https://nileai.solutions/#organization",
-      name: "Nile Ai Solutions",
+      name: "Nile AI Solutions",
       url: "https://nileai.solutions",
       telephone: "+256753523529",
       email: "hello@nileai.solutions",
@@ -267,14 +267,14 @@ export default function AiSolutionsUgandaPage() {
             </h1>
 
             <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-[var(--muted)] md:text-lg">
-              Nile Ai Solutions develops AI-powered software, intelligent
+              Nile AI Solutions develops AI-powered software, intelligent
               automation, AI agents and modern digital platforms for businesses,
               institutions and organisations in Uganda and across Africa.
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20to%20discuss%20an%20AI%20solution%20for%20my%20organisation."
+                href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20to%20discuss%20an%20AI%20solution%20for%20my%20organisation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -455,7 +455,7 @@ export default function AiSolutionsUgandaPage() {
               </div>
 
               <p className="mt-7 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-                Why Nile Ai Solutions
+                Why Nile AI Solutions
               </p>
 
               <h2 className="mt-4 text-4xl font-bold leading-[1.08] tracking-[-0.045em] md:text-5xl">
@@ -535,13 +535,13 @@ export default function AiSolutionsUgandaPage() {
               </p>
 
               <a
-                href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20am%20looking%20for%20AI%20solutions%20in%20Uganda%20and%20would%20like%20to%20discuss%20my%20organisation."
+                href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20am%20looking%20for%20AI%20solutions%20in%20Uganda%20and%20would%20like%20to%20discuss%20my%20organisation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-7 py-4 font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <MessageCircle size={20} />
-                Talk to Nile Ai Solutions
+                Talk to Nile AI Solutions
               </a>
             </div>
           </div>

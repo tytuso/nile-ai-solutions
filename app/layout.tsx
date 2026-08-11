@@ -27,19 +27,19 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "AI Solutions Uganda | AI Software & Automation | Nile Ai Solutions",
+      "AI Solutions Uganda | AI Software & Automation | Nile AI Solutions",
     template:
-      "%s | Nile Ai Solutions",
+      "%s | Nile AI Solutions",
   },
 
   description:
-    "Nile Ai Solutions is an AI company in Uganda building AI software, automation systems, AI agents, websites and custom digital platforms for organisations across Africa.",
+    "Nile AI Solutions is an AI company in Uganda building AI software, automation systems, AI agents, websites and custom digital platforms for organisations across Africa.",
 
   applicationName:
-    "Nile Ai Solutions",
+    "Nile AI Solutions",
 
   keywords: [
-    "Nile Ai Solutions",
+    "Nile AI Solutions",
     "AI company Uganda",
     "AI software development Uganda",
     "artificial intelligence Africa",
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Nile Ai Solutions",
+      name: "Nile AI Solutions",
       url: "https://nileai.solutions",
     },
   ],
 
-  creator: "Nile Ai Solutions",
-  publisher: "Nile Ai Solutions",
+  creator: "Nile AI Solutions",
+  publisher: "Nile AI Solutions",
 
   alternates: {
     canonical: "/",
@@ -69,10 +69,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_UG",
     url: "/",
-    siteName: "Nile Ai Solutions",
+    siteName: "Nile AI Solutions",
 
     title:
-      "Nile Ai Solutions | Intelligent Systems for Africa",
+      "Nile AI Solutions | Intelligent Systems for Africa",
 
     description:
       "AI-powered software, automation and digital solutions that help organisations operate smarter, grow faster and create greater impact.",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Nile Ai Solutions",
+        alt: "Nile AI Solutions",
       },
     ],
   },
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Nile Ai Solutions | Intelligent Systems for Africa",
+      "Nile AI Solutions | Intelligent Systems for Africa",
 
     description:
       "AI-powered software, automation and digital solutions for organisations across Africa.",

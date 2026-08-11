@@ -9,7 +9,7 @@ import { services } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore AI software, automation, website development, custom software, digital marketing and AI consulting services from Nile Ai Solutions.",
+    "Explore AI software, automation, website development, custom software, digital marketing and AI consulting services from Nile AI Solutions.",
 };
 
 export default function ServicesPage() {
@@ -75,7 +75,7 @@ export default function ServicesPage() {
 
           <div className="mt-16 flex justify-center">
             <a
-              href="https://wa.me/256753523529?text=Hello%20Nile%20Ai%20Solutions.%20I%20would%20like%20help%20choosing%20the%20right%20technology%20solution."
+              href="https://wa.me/256753523529?text=Hello%20Nile%20AI%20Solutions.%20I%20would%20like%20help%20choosing%20the%20right%20technology%20solution."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-7 py-4 font-semibold text-white shadow-lg"

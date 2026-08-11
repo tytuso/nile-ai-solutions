@@ -56,7 +56,7 @@ export function NileFlowSection() {
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[var(--primary)]" />
                 </span>
 
-                A Nile Ai product · Now live
+                A Nile AI product · Now live
               </div>
 
               <p className="mt-7 text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
@@ -273,7 +273,7 @@ export function NileFlowSection() {
                 <div className="mt-4 flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3">
                   <div>
                     <p className="text-xs font-bold text-slate-200">
-                      Built by Nile Ai Solutions
+                      Built by Nile AI Solutions
                     </p>
 
                     <p className="mt-1 text-[11px] text-slate-500">
