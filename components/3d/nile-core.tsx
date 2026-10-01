@@ -2,6 +2,7 @@
 
 import { Float, OrbitControls, Sparkles } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { useReducedMotion } from "framer-motion";
 import * as THREE from "three";
 import { useMemo, useRef } from "react";
 
@@ -44,9 +45,11 @@ function FlowRibbon({ offset = 0, color = RIVER }: { offset?: number; color?: st
 
 function Core() {
   const group = useRef<THREE.Group>(null);
+  const reduceMotion = useReducedMotion();
 
   useFrame((state, delta) => {
-    if (!group.current) return;
+    if (!group.current || reduceMotion) return;
+
     group.current.rotation.y += delta * 0.16;
     group.current.rotation.x = THREE.MathUtils.lerp(
       group.current.rotation.x,
@@ -62,7 +65,11 @@ function Core() {
 
   return (
     <group ref={group}>
-      <Float speed={1.15} rotationIntensity={0.18} floatIntensity={0.42}>
+      <Float
+        speed={reduceMotion ? 0 : 1.15}
+        rotationIntensity={reduceMotion ? 0 : 0.18}
+        floatIntensity={reduceMotion ? 0 : 0.42}
+      >
         <mesh>
           <icosahedronGeometry args={[0.66, 4]} />
           <meshPhysicalMaterial
@@ -114,8 +121,13 @@ function Core() {
 }
 
 function Node({ position, active = false }: { position: [number, number, number]; active?: boolean }) {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <Float speed={active ? 1.5 : 1} floatIntensity={active ? 0.35 : 0.22}>
+    <Float
+      speed={reduceMotion ? 0 : active ? 1.5 : 1}
+      floatIntensity={reduceMotion ? 0 : active ? 0.35 : 0.22}
+    >
       <mesh position={position}>
         <sphereGeometry args={[active ? 0.075 : 0.055, 20, 20]} />
         <meshStandardMaterial
@@ -129,9 +141,10 @@ function Node({ position, active = false }: { position: [number, number, number]
 }
 
 function Scene() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <>
-      <color attach="background" args={["#000000"]} />
       <ambientLight intensity={1.25} />
       <directionalLight position={[4, 5, 4]} intensity={2.2} color="#DDFBF5" />
       <pointLight position={[-3, 0, 2]} intensity={18} distance={9} color={RIVER} />
@@ -151,32 +164,33 @@ function Scene() {
         <Core />
       </group>
 
-      <Sparkles count={70} scale={[6.4, 4.5, 3.2]} size={1.25} speed={0.18} color="#95D6CF" noise={0.9} />
+      <Sparkles
+        count={reduceMotion ? 0 : 70}
+        scale={[6.4, 4.5, 3.2]}
+        size={1.25}
+        speed={reduceMotion ? 0 : 0.18}
+        color="#95D6CF"
+        noise={0.9}
+      />
+
       <OrbitControls
         enablePan={false}
         enableZoom={false}
         minPolarAngle={1.1}
         maxPolarAngle={2.05}
-        autoRotate
+        autoRotate={!reduceMotion}
         autoRotateSpeed={0.28}
       />
     </>
   );
 }
 
-function Unsupported3D() {
-  return (
-    <div className="core-fallback" aria-hidden="true">
-      <div className="core-fallback-orbit core-fallback-orbit-a" />
-      <div className="core-fallback-orbit core-fallback-orbit-b" />
-      <div className="core-fallback-core" />
-    </div>
-  );
-}
-
 export function NileCore({ className = "" }: { className?: string }) {
   return (
-    <div className={`relative h-full min-h-[360px] w-full overflow-hidden ${className}`} aria-label="Interactive 3D Nile intelligence core">
+    <div
+      className={`relative h-full min-h-[360px] w-full overflow-hidden ${className}`}
+      aria-label="Interactive 3D Nile intelligence core"
+    >
       <Canvas
         camera={{ position: [0, 0.15, 6.15], fov: 36 }}
         dpr={[1, 1.5]}
@@ -186,11 +200,10 @@ export function NileCore({ className = "" }: { className?: string }) {
         <Scene />
       </Canvas>
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_48%,rgba(66,217,190,0.12),transparent_34%),linear-gradient(180deg,transparent_0%,rgba(2,9,16,0.05)_70%,rgba(2,9,16,0.3)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_48%,rgba(66,217,190,0.12),transparent_34%),linear-gradient(180deg,transparent_0%,rgba(2,9,16,0.02)_70%,rgba(2,9,16,0.16)_100%)]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <span className="core-label">NILE CORE</span>
       </div>
-      <Unsupported3D />
     </div>
   );
 }
