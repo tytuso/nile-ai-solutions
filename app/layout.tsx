@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-} from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
@@ -10,134 +7,73 @@ import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://nileai.solutions",
-  ),
-
+  metadataBase: new URL("https://nileai.solutions"),
   title: {
-    default:
-      "AI Solutions Uganda | AI Software & Automation | Nile AI Solutions",
-    template:
-      "%s | Nile AI Solutions",
+    default: "Nile AI Solutions | Intelligent Systems for Africa",
+    template: "%s | Nile AI Solutions",
   },
-
   description:
-    "Nile AI Solutions is an AI company in Uganda building AI software, automation systems, AI agents, websites and custom digital platforms for organisations across Africa.",
-
-  applicationName:
-    "Nile AI Solutions",
-
+    "Nile AI Solutions builds AI software, agents, automation, websites and custom digital systems for organisations across Africa.",
+  applicationName: "Nile AI Solutions",
   keywords: [
     "Nile AI Solutions",
     "AI company Uganda",
     "AI software development Uganda",
-    "artificial intelligence Africa",
-    "AI automation Uganda",
-    "custom software development Uganda",
-    "website development Uganda",
+    "AI automation Africa",
     "AI agents",
-    "business automation",
+    "custom software development",
+    "website development Uganda",
     "digital transformation Africa",
   ],
-
-  authors: [
-    {
-      name: "Nile AI Solutions",
-      url: "https://nileai.solutions",
-    },
-  ],
-
-  creator: "Nile AI Solutions",
-  publisher: "Nile AI Solutions",
-
-  alternates: {
-    canonical: "/",
-  },
-
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_UG",
     url: "/",
     siteName: "Nile AI Solutions",
-
-    title:
-      "Nile AI Solutions | Intelligent Systems for Africa",
-
+    title: "Nile AI Solutions | Intelligent Systems for Africa",
     description:
-      "AI-powered software, automation and digital solutions that help organisations operate smarter, grow faster and create greater impact.",
-
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Nile AI Solutions",
-      },
-    ],
+      "AI-powered software, automation and digital solutions built for organisations across Africa.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Nile AI Solutions" }],
   },
-
   twitter: {
     card: "summary_large_image",
-
-    title:
-      "Nile AI Solutions | Intelligent Systems for Africa",
-
+    title: "Nile AI Solutions | Intelligent Systems for Africa",
     description:
-      "AI-powered software, automation and digital solutions for organisations across Africa.",
-
-    images: [
-      "/opengraph-image",
-    ],
+      "AI-powered software, automation and digital solutions built for organisations across Africa.",
+    images: ["/opengraph-image"],
   },
-
   robots: {
     index: true,
     follow: true,
-
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview":
-        "large",
+      "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
     },
   },
-
   category: "technology",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-    >
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={poppins.variable}>
         <OrganizationSchema />
-
         <ThemeProvider>
           {children}
           <ScrollToTop />
         </ThemeProvider>
-
         <script
           id="nileflow-website-widget"
           src="https://nileflow-five.vercel.app/widget/nileflow.js?v=715a80f"
