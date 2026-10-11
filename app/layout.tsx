@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "AI Solutions Uganda | AI Software & Automation | Nile AI Solutions",
+      "Websites, Business Systems & AI Tools | Nile AI Solutions",
     template:
       "%s | Nile AI Solutions",
   },
@@ -72,10 +72,10 @@ export const metadata: Metadata = {
     siteName: "Nile AI Solutions",
 
     title:
-      "Nile AI Solutions | Intelligent Systems for Africa",
+      "Nile AI Solutions | Your next big idea. Built to work.",
 
     description:
-      "AI-powered software, automation and digital solutions that help organisations operate smarter, grow faster and create greater impact.",
+      "Premium websites, custom business systems and practical AI tools. Built in Uganda for ambitious businesses everywhere.",
 
     images: [
       {
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Nile AI Solutions | Intelligent Systems for Africa",
+      "Nile AI Solutions | Your next big idea. Built to work.",
 
     description:
       "AI-powered software, automation and digital solutions for organisations across Africa.",
@@ -131,6 +131,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable}`}
       >
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <OrganizationSchema />
 
         <ThemeProvider>

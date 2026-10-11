@@ -33,6 +33,8 @@ export async function generateMetadata({
 
   return {
     title: service.title,
+    alternates: { canonical: `/services/${service.slug}` },
+    openGraph: { title: service.title, description: service.shortDescription, url: `/services/${service.slug}` },
     description: service.shortDescription,
   };
 }
@@ -48,7 +50,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const Icon = service.icon;
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <section className="relative overflow-hidden pb-20 pt-36 md:pb-28 md:pt-44">

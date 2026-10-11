@@ -16,7 +16,7 @@ const footerNavigation = [
     href: "/ai-automation-uganda",
   },
   { name: "Services", href: "/services" },
-  { name: "Products", href: "/portfolio" },
+  { name: "Projects", href: "/projects" },
   { name: "About", href: "/#about" },
   { name: "Contact", href: "/#contact" },
 ];
