@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { projects } from "@/lib/projects";
+
 import { services } from "@/lib/services";
 
 const baseUrl = "https://nileai.solutions";
@@ -44,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/portfolio`,
+      url: `${baseUrl}/projects`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
@@ -67,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    ...projects.map((project) => ({ url: `${baseUrl}/projects/${project.slug}`, lastModified: new Date("2026-10-11"), changeFrequency: "monthly" as const, priority: 0.8 })),
     ...servicePages,
   ];
 }

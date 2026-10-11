@@ -239,7 +239,7 @@ export default function AiAutomationUgandaPage() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <script

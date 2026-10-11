@@ -1,13 +1,7 @@
 import { ImageResponse } from "next/og";
-
-export const alt = "Nile AI Solutions";
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
+export const alt = "Nile AI Solutions — Your next big idea. Built to work.";
+export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-
 export default function Image() {
   return new ImageResponse(
     (
@@ -16,140 +10,61 @@ export default function Image() {
           width: "100%",
           height: "100%",
           display: "flex",
-          position: "relative",
-          overflow: "hidden",
-          background:
-            "linear-gradient(135deg, #f8fbff 0%, #eef8ff 52%, #e8fffa 100%)",
-          color: "#07152d",
-          padding: "72px",
-          fontFamily: "Arial, sans-serif",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          background: "#071c29",
+          color: "#f7fcff",
+          padding: "65px 75px",
+          fontFamily: "Arial",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            width: "420px",
-            height: "420px",
-            right: "-100px",
-            top: "-100px",
-            borderRadius: "999px",
-            background:
-              "linear-gradient(135deg, rgba(15,191,159,0.28), rgba(20,119,248,0.22))",
-            filter: "blur(20px)",
-          }}
-        />
-
-        <div
-          style={{
-            position: "absolute",
-            width: "320px",
-            height: "320px",
-            left: "-120px",
-            bottom: "-120px",
-            borderRadius: "999px",
-            background: "rgba(20,119,248,0.12)",
-            filter: "blur(20px)",
-          }}
-        />
-
+        <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
+          <div
+            style={{
+              display: "flex",
+              width: 55,
+              height: 55,
+              borderRadius: 15,
+              background: "#77edd0",
+              color: "#071c29",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 35,
+              fontWeight: 700,
+            }}
+          >
+            N
+          </div>
+          <span style={{ fontSize: 26, fontWeight: 700 }}>
+            Nile AI Solutions
+          </span>
+        </div>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
-            position: "relative",
-            width: "100%",
+            fontSize: 82,
+            fontWeight: 700,
+            letterSpacing: -4,
+            lineHeight: 1.06,
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-            }}
-          >
-            <div
-              style={{
-                width: "76px",
-                height: "76px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: "24px",
-                background:
-                  "linear-gradient(135deg, #0fbf9f 0%, #22cfe5 50%, #1477f8 100%)",
-                color: "white",
-                fontSize: "38px",
-                fontWeight: 800,
-              }}
-            >
-              N
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <span
-                style={{
-                  fontSize: "34px",
-                  fontWeight: 800,
-                  letterSpacing: "-1px",
-                }}
-              >
-                Nile AI
-              </span>
-
-              <span
-                style={{
-                  marginTop: "5px",
-                  fontSize: "16px",
-                  fontWeight: 700,
-                  letterSpacing: "8px",
-                  textTransform: "uppercase",
-                  color: "#64748b",
-                }}
-              >
-                Solutions
-              </span>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              maxWidth: "950px",
-            }}
-          >
-            <span
-              style={{
-                fontSize: "76px",
-                lineHeight: 1.03,
-                fontWeight: 850,
-                letterSpacing: "-4px",
-              }}
-            >
-              We Build Intelligent Systems for Africa&apos;s Future.
-            </span>
-
-            <span
-              style={{
-                marginTop: "28px",
-                fontSize: "26px",
-                lineHeight: 1.4,
-                color: "#52647c",
-              }}
-            >
-              AI software, automation and digital solutions for organisations
-              across Africa.
-            </span>
-          </div>
+          <span>Your next big idea.</span>
+          <span style={{ color: "#77edd0" }}>Built to work.</span>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: 19,
+            color: "#a8c1cd",
+          }}
+        >
+          <span>Websites. Business systems. AI tools.</span>
+          <span>nileai.solutions</span>
         </div>
       </div>
     ),
-    size,
+    { ...size },
   );
 }

@@ -232,7 +232,7 @@ export default function AiSolutionsUgandaPage() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
 
       <script

@@ -21,9 +21,9 @@ const navigation: NavItem[] = [
     path: "/",
   },
   {
-    name: "Products",
-    href: "/portfolio",
-    path: "/portfolio",
+    name: "Projects",
+    href: "/projects",
+    path: "/projects",
   },
   {
     name: "Services",
@@ -102,11 +102,12 @@ export function Header() {
       return pathname === "/services" || pathname.startsWith("/services/");
     }
 
-    return pathname === item.path;
+    return pathname === item.path || pathname.startsWith(`${item.path}/`);
   }
 
   return (
     <header
+      onKeyDown={(event) => { if (event.key === "Escape") setMenuOpen(false); }}
       className={`sticky top-0 z-50 w-full border-b border-[var(--border)] transition-all duration-300 ${
         scrolled
           ? "bg-[var(--surface-glass)] shadow-sm backdrop-blur-xl"
@@ -132,7 +133,7 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-5 xl:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-5 xl:flex">
           {navigation.map((item) => {
             const active = isActive(item);
 
@@ -168,7 +169,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Talk to Nile AI Solutions on WhatsApp"
-            className="flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+            className="flex items-center gap-2 rounded-full bg-[#087a70] px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
           >
             <MessageCircle size={18} />
 
