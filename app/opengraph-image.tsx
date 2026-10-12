@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-export const alt = "Nile AI Solutions — Your next big idea. Built to work.";
+export const alt = "Nile AI Solutions — From AI to SI: Super Intelligence. Building toward Uganda’s biggest AI company.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default function Image() {
@@ -49,8 +49,21 @@ export default function Image() {
             lineHeight: 1.06,
           }}
         >
-          <span>Your next big idea.</span>
-          <span style={{ color: "#77edd0" }}>Built to work.</span>
+          <span>
+            From{" "}
+            <span
+              style={{
+                color: "#a8c1cd",
+                textDecorationLine: "line-through",
+                textDecorationColor: "#ff896e",
+                textDecorationThickness: 6,
+              }}
+            >
+              AI
+            </span>{" "}
+            to
+          </span>
+          <span style={{ color: "#77edd0" }}>SI. Super Intelligence.</span>
         </div>
         <div
           style={{
@@ -60,7 +73,7 @@ export default function Image() {
             color: "#a8c1cd",
           }}
         >
-          <span>Websites. Business systems. AI tools.</span>
+          <span>Building Uganda’s biggest AI company.</span>
           <span>nileai.solutions</span>
         </div>
       </div>
