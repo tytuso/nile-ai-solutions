@@ -21,15 +21,15 @@ import { projects, contactUrl } from "@/lib/projects";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Premium Websites, Web Apps & AI Systems | Nile AI Solutions Uganda",
+      "Super Intelligence & AI Software in Uganda | Nile AI Solutions",
   },
   description:
-    "Nile AI Solutions builds premium websites, custom business systems, progressive web apps and AI tools in Uganda. Explore our completed projects and discuss your next build.",
+    "Nile AI Solutions is building toward Uganda’s biggest AI company, advancing from artificial intelligence into Super Intelligence with intelligent software, agents, automation and digital products.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Your next big idea. Built to work.",
+    title: "From AI to SI — Super Intelligence | Nile AI Solutions",
     description:
-      "Premium websites, business systems and AI products. Built in Uganda, for ambitious businesses everywhere.",
+      "Building toward Uganda’s biggest AI company and the next era of Super Intelligence.",
     url: "/",
   },
 };
@@ -98,17 +98,29 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <p className="eyebrow hero-eyebrow">
-                <span /> DIGITAL PRODUCTS. REAL POSSIBILITIES.
+                <span /> THE NEXT ERA OF INTELLIGENCE STARTS HERE.
               </p>
               <h1>
-                Your next <br />
-                big idea.
+                From
                 <br />
-                <span>Built to work.</span>
+                <span className="hero-ai-evolution">
+                  <del>AI</del>
+                  <span className="hero-era-arrow" aria-hidden="true">
+                    →
+                  </span>
+                  <strong>SI</strong>
+                </span>
+                <span className="hero-super-intelligence">
+                  Super Intelligence.
+                </span>
               </h1>
               <p className="hero-description">
-                Premium websites, business systems and AI tools that turn
-                ambition into something people can actually use.
+                We’re moving beyond today’s AI toward systems that can reason,
+                create and act—built for businesses and institutions ready for
+                what’s next.
+              </p>
+              <p className="hero-ambition">
+                OUR AMBITION: BUILD UGANDA’S BIGGEST AI COMPANY
               </p>
               <div className="button-row">
                 <a
@@ -124,8 +136,7 @@ export default function Home() {
                 </Link>
               </div>
               <p className="hero-origin">
-                <span className="origin-dot" /> Built in Uganda. Made for what’s
-                next.
+                <span className="origin-dot" /> Born in Uganda. Building intelligence for the world.
               </p>
             </div>
             <div
