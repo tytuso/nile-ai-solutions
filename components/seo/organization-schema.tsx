@@ -5,7 +5,7 @@ export function OrganizationSchema() {
     "@id": "https://nileai.solutions/#organization",
     name: "Nile AI Solutions",
     url: "https://nileai.solutions",
-    logo: "https://nileai.solutions/icon-512.png",
+    logo: "https://nileai.solutions/icon.svg",
     description:
       "Nile AI Solutions develops AI-powered software, automation systems, websites, web applications and digital solutions for organisations in Uganda and across Africa.",
     email: "hello@nileai.solutions",
