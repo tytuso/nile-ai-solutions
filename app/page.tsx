@@ -136,7 +136,8 @@ export default function Home() {
                 </Link>
               </div>
               <p className="hero-origin">
-                <span className="origin-dot" /> Born in Uganda. Building intelligence for the world.
+                <span className="origin-dot" /> Born in Uganda. Building
+                intelligence for the world.
               </p>
             </div>
             <div
