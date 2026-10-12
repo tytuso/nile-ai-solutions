@@ -14,6 +14,27 @@ export type Project = {
 // Include released products only. URLs and brand assets verified 11 October 2026.
 export const projects: Project[] = [
   {
+    slug: "gulako",
+    name: "Gulako",
+    category: "Commerce PWA",
+    title: "A storefront built for small business.",
+    description:
+      "A mobile-first commerce platform that helps Ugandan sellers showcase products, receive customer orders and manage their online shop.",
+    url: "https://gulako.site/",
+    logo: "/projects/gulako.svg",
+    color: "#8b5cf6",
+    audience: "Small businesses and independent sellers in Uganda",
+    story:
+      "Gulako gives local sellers a simple way to take their shop online. Customers can browse a seller's storefront and place orders, while sellers manage products and incoming business from one mobile-friendly workspace. The progressive web app is designed to feel at home on phones, where many small businesses serve their customers.",
+    features: [
+      "Branded online storefronts for individual sellers",
+      "Product catalog and order management",
+      "Customer-friendly cart and checkout flows",
+      "Installable progressive web app for mobile",
+      "Seller order notifications",
+    ],
+  },
+  {
     slug: "nile-graphics",
     name: "Nile Graphics",
     category: "AI & design",
