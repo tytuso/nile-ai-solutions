@@ -1,13 +1,16 @@
+import { site } from "@/lib/site";
+
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["Organization", "ProfessionalService"],
     "@id": "https://nileai.solutions/#organization",
-    name: "Nile AI Solutions",
-    url: "https://nileai.solutions",
+    name: site.name,
+    alternateName: site.alternateNames,
+    url: site.url,
     logo: "https://nileai.solutions/icon.svg",
     description:
-      "Nile AI Solutions develops AI-powered software, automation systems, websites, web applications and digital solutions for organisations in Uganda and across Africa.",
+      site.description,
     email: "hello@nileai.solutions",
     telephone: "+256753523529",
     areaServed: [
@@ -45,7 +48,7 @@ export function OrganizationSchema() {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schema),
+        __html: JSON.stringify(schema).replace(/</g, "\\u003c"),
       }}
     />
   );

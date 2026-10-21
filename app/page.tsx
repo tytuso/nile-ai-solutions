@@ -16,20 +16,22 @@ import {
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ProjectCard } from "@/components/projects/project-card";
+import { WebsiteSchema } from "@/components/seo/website-schema";
 import { projects, contactUrl } from "@/lib/projects";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Super Intelligence & AI Software in Uganda | Nile AI Solutions",
+      site.title,
   },
   description:
-    "Nile AI Solutions is building toward Uganda’s biggest AI company, advancing from artificial intelligence into Super Intelligence with intelligent software, agents, automation and digital products.",
+    site.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "From AI to SI — Super Intelligence | Nile AI Solutions",
-    description:
-      "Building toward Uganda’s biggest AI company and the next era of Super Intelligence.",
+    title: site.title,
+    description: site.description,
+    siteName: site.name,
     url: "/",
   },
 };
@@ -69,8 +71,12 @@ const offerings = [
 ];
 const faqs = [
   [
-    "What can Nile AI Solutions build for my business?",
-    "We build company websites, web applications, business management systems, AI tools and progressive web apps. We start with what your customers or team need to do, then recommend the right scope.",
+    "What AI solutions can Nile AI Solutions build for my business?",
+    "We build AI assistants, business automation, company websites, web applications, business management systems and progressive web apps for organisations in Uganda and across Africa. We start with what your customers or team need to do, then recommend the right scope.",
+  ],
+  [
+    "Are Nile AI, Nile AI Solutions and Nile SI Solutions the same company?",
+    "Yes. Nile AI Solutions is our company name, often shortened to Nile AI. Nile SI Solutions refers to the same team’s Super Intelligence vision. Our products, services and contact details are all here at nileai.solutions.",
   ],
   [
     "Can you improve a website or system I already have?",
@@ -93,12 +99,13 @@ export default function Home() {
   return (
     <>
       <Header />
+      <WebsiteSchema />
       <main id="main-content" className="agency-home">
         <section id="home" className="agency-hero">
           <div className="container hero-grid">
             <div className="hero-copy">
               <p className="eyebrow hero-eyebrow">
-                <span /> THE NEXT ERA OF INTELLIGENCE STARTS HERE.
+                <span /> NILE AI SOLUTIONS · THE NEXT ERA OF INTELLIGENCE.
               </p>
               <h1>
                 From
@@ -115,9 +122,9 @@ export default function Home() {
                 </span>
               </h1>
               <p className="hero-description">
-                We’re moving beyond today’s AI toward systems that can reason,
-                create and act—built for businesses and institutions ready for
-                what’s next.
+                Nile AI Solutions builds AI software and automation in Uganda.
+                Our vision is Super Intelligence: systems that can reason, create
+                and act.
               </p>
               <p className="hero-ambition">
                 OUR AMBITION: BUILD UGANDA’S BIGGEST AI COMPANY
