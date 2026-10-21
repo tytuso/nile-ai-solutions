@@ -7,6 +7,7 @@ import {
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { site } from "@/lib/site";
 
 import "./globals.css";
 
@@ -27,19 +28,20 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Websites, Business Systems & AI Tools | Nile AI Solutions",
+      site.title,
     template:
       "%s | Nile AI Solutions",
   },
 
   description:
-    "Nile AI Solutions is an AI company in Uganda building AI software, automation systems, AI agents, websites and custom digital platforms for organisations across Africa.",
+    site.description,
 
   applicationName:
     "Nile AI Solutions",
 
   keywords: [
     "Nile AI Solutions",
+    ...site.alternateNames,
     "AI company Uganda",
     "AI software development Uganda",
     "artificial intelligence Africa",
@@ -72,10 +74,10 @@ export const metadata: Metadata = {
     siteName: "Nile AI Solutions",
 
     title:
-      "Nile AI Solutions | Your next big idea. Built to work.",
+      site.title,
 
     description:
-      "Premium websites, custom business systems and practical AI tools. Built in Uganda for ambitious businesses everywhere.",
+      site.description,
 
     images: [
       {
@@ -91,10 +93,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Nile AI Solutions | Your next big idea. Built to work.",
+      site.title,
 
     description:
-      "AI-powered software, automation and digital solutions for organisations across Africa.",
+      site.description,
 
     images: [
       "/opengraph-image",
